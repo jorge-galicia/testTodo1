@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link href="../css/jwd.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <!--<link rel="stylesheet" href="css/index.css">-->
+        <title>Usuario | Admik</title>
+    </head>
+    <body>
+        <div class="app">        
+                
+        <nav class="jwd-sidebar jwd-bar-block jwd-card" id="mySidebar">
+            <div class="jwd-container jwd-theme-d6">
+                <span onclick="closeSidebar()" class="jwd-button jwd-display-topright jwd-large" style="background: none;"><strong>x</strong></span>
+                <br>
+                <div class="jwd-padding jwd-center home" id="home">
+                    <div id="usName" style="margin:-1em .5em .5em; font-weight: 600;"></div>
+                </div>
+            </div>
+            <span class="nav-item nav-link-icon">
+                <a class="nav-link usuario" id="usuario">
+                    <svg class="svg-inline--fa fa-user fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></svg>
+                    Mi Cuenta
+                </a>
+            </span>   
+            <span class="nav-item nav-link-icon">
+                <a class="nav-link historial" id="historial">
+                    <svg class="svg-inline--fa fa-tags fa-w-20" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="tags" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"></path></svg>
+                    Historial
+                </a>
+            </span><hr>
+            <span class="nav-item nav-link-icon">
+                <a class="nav-link logout" id="logout">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 25 24" data-icon="lock" role="img" fill="currentColor" class="feather fa-lock fa-w-14"><path d="M20.2,10.6h-1.1V7.2c0-3.9-3.2-7.1-7.1-7.1S5,3.3,5,7.2v3.3H3.9c-1.2,0-2.2,1-2.2,2.2v8.9c0,1.2,1,2.2,2.2,2.2h16.4 c1.2,0,2.2-1,2.2-2.2v-8.9C22.5,11.6,21.5,10.6,20.2,10.6z M15.4,10.6H8.7V7.2c0-1.8,1.5-3.3,3.3-3.3s3.3,1.5,3.3,3.3V10.6z"></path></svg>
+                    Salir
+                </a>
+            </span>
+        </nav>
+    
+        <header class="jwd-bar">
+        <button class="jwd-bar-item jwd-button jwd-xlarge jwd-hover-theme" style="color:white; background-color:#80458F; border-radius: 0 20% 60%;" onclick="openSidebar()"><b>&#9776;</b></button>
+        <h5 class="jwd-bar-item" id="title-top"></h5>
+        </header>
+        <div class="jwd-container jwd-phome">
+            <h3 class="jwd-center" style="color:white;">Mi Cuenta</h3><br>
+            <div class="mk-usuario" id="mk-usuario">  </div> 
+            <br> 
+            <div class="mc-btn-rech"><a class="nav-link historial" id="historial">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" style="max-width: 2em;" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+                    <path  d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                </svg><br>Historial
+            </a></div>
+            <br>
+        </div>
+        <div class="jwd-off"> 
+            <a class="logout" id="logout"><img class="jwd-circle" src="../img/btn-off.png" alt="logout" style="width:65%;"><br></a>
+        </div>
+        <footer class="jwd-container jwd-margin-bottom" style="background-color: none;">
+            <a href="">        
+                <img class="imgFooter" src="" alt="">
+            </a>
+        </footer>
+      
+        <script>
+            closeSidebar();
+            function openSidebar() {
+                document.getElementById("mySidebar").style.display = "block";
+            }        
+            function closeSidebar() {
+                document.getElementById("mySidebar").style.display = "none";
+            }            
+        </script> 
+  
+      </div>
+      <script src="../cordova.js"></script>
+      <script src="../js/jquery-3.6.0.min.js"></script>
+      <script src="../js/bootstrap.min.js" ></script>
+      <script src="../js/bootbox.min.js" ></script>
+      <script src="../js/index.js"></script>
+      <script>
+          login.validaSesion();
+          datos.User();
+      </script>
+      </body>
+  </html>

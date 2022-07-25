@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light dark">
+        <!--<link rel="stylesheet" href="css/index.css">-->
+        <title>Login | Admik</title>
+        <link href="css/jwd.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    </head> 
+    <style>
+        a {color: rgb(99, 99, 99);}
+    </style>   
+    
+    <body>
+        <div class="app">
+            
+            <div class="container-login">
+                <div class="jwd-container jwd-card" id="head-index">
+                </div>            
+                <div id="validar-am" class="fieldset container">
+                    <div class="img-index" id="img-index"><img src="img/logo.png" style="max-width:200px; margin-left:auto; margin-right:auto; display:flex;"></div>
+                    <small class="jwd-center" id="subtitle"><b>"Test Banco"</b></small>
+                    <div class="pwErr" id="pwErr"></div>
+                    <div class="col-md-12 form-field ">                            
+                        <label for="usuario" class="up-text">USUARIO:</label>
+                        <input type="text" class="form-control it" name="usuario" id="usuario" required="required">                            
+                    </div>
+                    <div class="col-md-12 form-field ">                            
+                        <label for="password" class="up-text">CONTRASE&Ntilde;A:</label>
+                        <input type="password" class="form-control it" name="password" id="password" required="required">                            
+                    </div>
+                    <center><br>
+                        <input type="submit" class="loginBtn btn" name="loginBtn" id="loginBtn" value="I N G R E S A R" style="font-weight: bold;"><br>
+                    </center>
+                </div>
+            </div>
+
+        </div>
+        <script src="cordova.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/bootstrap.min.js" ></script>
+        <script src="js/bootbox.min.js" ></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
